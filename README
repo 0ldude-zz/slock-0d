@@ -13,6 +13,11 @@ Installation
 Edit config.mk to match your local setup (slock is installed into
 the /usr/local namespace by default).
 
+On OpenBSD
+Add -I/usr/local/include to INCS line
+Add -L/usr/local/lib to LIBS line
+Remove -lcrypt from LIBS
+Remove -DHAVE_SHADOW_H from CPPFLAGS
 Afterwards enter the following command to build and install slock
 (if necessary as root):
 
